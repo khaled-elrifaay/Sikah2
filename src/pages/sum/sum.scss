@@ -1,0 +1,111 @@
+page-sum {
+	.cancel{
+		margin-top: 10px;
+		border-radius: 0;
+	}
+	table{
+		width: 70%;
+		color:#fff;
+		text-align: left;
+		tr{
+			td{
+				padding: 0.4em;
+				padding-left: 1em;
+			}
+		}
+	}
+	.call{
+		font-size: 54px;
+		color:#fff;
+		padding-left: 0.4em;
+	}
+	.whi{
+		padding-left: 1em;
+		width: 100%;
+
+	}
+	.wide{
+		padding-left: 5em;
+		padding-right: 5em;
+		border-radius: 0; 
+		margin: 0 auto!important;
+	}
+	.det{
+		float: left;
+		font-weight: 700;
+		font-size:16px;
+		padding-left: 1em;
+		padding-bottom: 0.3em;
+		display: block;
+	}
+	table{
+		width: 100%;
+		color:#390c2b;
+		text-align: left;
+		font-size:16px;
+		margin-bottom: 1em;
+		tr{
+			td{
+				padding: 0.4em;
+				padding-left: 1em;
+			}
+		}
+	}
+	p{
+		color:#390c2b;
+	}
+	.cc.t{
+		margin-top: 0!important;
+		padding: 0!important;
+		max-height: 100px;
+	}
+	.ut{
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		font-size: 14px;
+		tbody{
+			margin: 0;
+			padding: 0;
+			tr{		
+				margin: 0;
+				padding: 0;
+				td{		
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+	.frto{
+		float: right;
+		font-size: 50px;
+		font-weight: 700;
+		margin-top: 6px;
+	}
+	.cc{
+		margin-top: 2em!important;
+	}
+	.rate{
+		font-size: 20px;
+	}
+	.gold{
+		color:gold;
+	}
+	.pac{
+		color:#390c2b;
+	}
+	.amount{
+		font-size: 55px;
+		color:#390c2b;
+		margin: 0.7em 0;
+	}
+	.help{
+		display: block;
+	}
+	.help>button{
+		border:1px solid #390c2b;
+		padding: 0.2em 0.6em;
+		background-color: transparent;
+	}
+}

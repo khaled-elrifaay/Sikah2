@@ -1,0 +1,43 @@
+page-help {
+	.cancel{
+		margin-top: 10px;
+		border-radius: 0;
+	}
+	table{
+		width: 70%;
+		color:#fff;
+		text-align: left;
+		tr{
+			td{
+				padding: 0.4em;
+				padding-left: 1em;
+			}
+		}
+	}
+	.call{
+		font-size: 54px;
+		color:#fff;
+		padding-left: 0.4em;
+	}
+	.whi{
+		padding-left: 1em;
+		width: 100%;
+
+	}
+	.wide{
+		padding-left: 5em;
+		padding-right: 5em;
+		border-radius: 0; 
+	}
+	.hi{
+		height: 130px!important;
+	}
+	.text-input{
+		margin: 1.5em 0;
+		padding: 1em;
+		border:1px solid #390c2b;
+	}
+	.gold{
+		color:gold;
+	}
+}

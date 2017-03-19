@@ -1,0 +1,37 @@
+page-arrived {
+	.cancel{
+		margin-top: 10px;
+		border-radius: 0;
+	}
+	table{
+		width: 70%;
+		color:#fff;
+		text-align: left;
+		tr{
+			td{
+				padding: 0.4em;
+				padding-left: 1em;
+			}
+		}
+	}
+	.call{
+		font-size: 54px;
+		color:#fff;
+		padding-left: 0.4em;
+	}
+	h4{
+		padding-left: 1em;
+		width: 100%;
+	}
+	.gold{
+		color:gold;
+	}
+
+	.req{
+		position: absolute;
+		bottom: 10px;
+		border-radius: 0;
+		left: 50%;
+  		transform: translate(-50%, -0%);
+	}
+}

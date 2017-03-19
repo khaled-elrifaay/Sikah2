@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <button ion-button class="req">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+    <ion-title>Breakdown</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list radio-group no-lines>
+    <ion-item>
+      <ion-label>The driver arrived late</ion-label>
+      <ion-radio value="1" checked></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>The car was not clean from inside or outside</ion-label>
+      <ion-radio value="2"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>There was bad smell in car</ion-label>
+      <ion-radio value="3"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>The car was backed out or malfunction</ion-label>
+      <ion-radio value="4"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>The driver was talking in the mobile while driving</ion-label>
+      <ion-radio value="5"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>The driver spoke a way that is not indecent</ion-label>
+      <ion-radio value="6"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>The driver was unprofessional</ion-label>
+      <ion-radio value="7"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Others</ion-label>
+      <ion-radio value="8"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <ion-item no-lines>
+    <ion-textarea rows="4"></ion-textarea>
+  </ion-item>
+  <ion-row>
+    <button ion-button color="primary" class="wide">Send</button>
+  </ion-row>
+</ion-content>

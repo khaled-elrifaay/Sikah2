@@ -1,0 +1,78 @@
+page-payment {
+	.cancel{
+		margin-top: 10px;
+		border-radius: 0;
+	}
+	table{
+		width: 70%;
+		color:#fff;
+		text-align: left;
+		tr{
+			td{
+				padding: 0.4em;
+				padding-left: 1em;
+			}
+		}
+	}
+	.call{
+		font-size: 54px;
+		color:#fff;
+		padding-left: 0.4em;
+	}
+	.whi{
+		padding-left: 1em;
+		width: 100%;
+
+	}
+	.wide{
+		padding-left: 5em;
+		padding-right: 5em;
+		border-radius: 0; 
+	}
+	.det{
+		float: left;
+		padding-left: 2em;
+		padding-bottom: 0.3em;
+		display: block;
+	}
+	.det:after{
+		content: "";
+	}
+	table{
+		width: 90%;
+		display: block;
+		margin: 0 auto;
+		color:#390c2b;
+		text-align: left;
+		margin-bottom: 1em;
+		border-top:1px solid #390c2b;
+		tr{
+			td{
+				padding: 0.4em;
+				padding-left: 1em;
+			}
+		}
+	}
+	.cc{
+		margin-top: 2em!important;
+	}
+	.gold{
+		color:gold;
+	}
+	.pac{
+		color:#390c2b;
+	}
+	.amount{
+		font-size: 55px;
+		color:#390c2b;
+		margin: 0.7em 0;
+	}
+	.help{
+		display: block;
+	}
+	.help>button{
+		border:1px solid #390c2b;
+		padding: 0.2em 0.6em;
+		background-color: transparent;
+	}
+}
