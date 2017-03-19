@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {PasswordPagePage} from '../password-page/password-page';
+import {Arrived} from "../arrived/arrived";
 
 /*
   Generated class for the EmailPage page.
@@ -13,13 +14,15 @@ import {PasswordPagePage} from '../password-page/password-page';
   templateUrl: 'email-page.html'
 })
 export class EmailPagePage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  public pushPage;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.pushPage = PasswordPagePage;
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad EmailPagePage');
   }
-gotopassword(){
-  this.navCtrl.push(PasswordPagePage);
-}
+/*gotopassword(){
+  this.navCtrl.push(Arrived);
+}*/
 }

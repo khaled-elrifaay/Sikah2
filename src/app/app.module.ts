@@ -20,6 +20,7 @@ import {EmailPagePage} from '../pages/email-page/email-page';
 import {PasswordPagePage} from '../pages/password-page/password-page';
 import {MobilePagePage} from '../pages/mobile-page/mobile-page';
 import {TranslateModule, TranslateStaticLoader, TranslateLoader} from "ng2-translate";
+import {ActiveCodePagePage} from "../pages/active-code-page/active-code-page";
 
 export function createTranslateLoader(http: any) {
     return new TranslateStaticLoader(http, 'assets/i18n', '.json');
@@ -43,7 +44,8 @@ export function createTranslateLoader(http: any) {
     BeforeSignupPage,
     SignupPage,
     EmailPagePage,
-    PasswordPagePage
+    PasswordPagePage,
+    ActiveCodePagePage
   ],
   imports: [
     IonicModule.forRoot(MyApp),TranslateModule.forRoot(),
@@ -71,7 +73,8 @@ export function createTranslateLoader(http: any) {
     SignupPage,
     EmailPagePage,
     PasswordPagePage,
-    MobilePagePage
+    MobilePagePage,
+    ActiveCodePagePage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},GlobalService]
 })

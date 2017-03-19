@@ -2,24 +2,26 @@ page-signup {
 ion-avatar {
     border: 1px solid white;
     width: 120px;
-    border-radius: 17px;
-    margin-left: 77px;
-    margin-top: 46px;
+    border-radius: 46px;
+    margin-left: 138px;
+    margin-top: 43px;
 }
-span.button-inner {
-    margin-top: -64px;
-}
-.title {
-    padding-right: 12px !important;
-    margin-top: 21px;
-}
-.profile {
-    margin-top: -31px;
-}
-.arrow {
-    display: inline-block;
+    .list-md {
+        margin: 18px 0 16px 0;
+    }
+    .profile {
+        margin-top: -40px;
+        background-color: #390c2b;
+        padding: 10px;
+        width: 420px;
+        margin-left: -19px;
+    }
+    .input-wrapper {
+        border: 1px solid #390c2b;
+    }
+    .arrow {
     font-size: 3.2em;
     margin-left: 42%;
-    //margin-top: 7px;
+    margin-top: inherit;
 }
 }
