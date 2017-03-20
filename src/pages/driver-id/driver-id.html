@@ -1,0 +1,44 @@
+<!--
+  Generated template for the DriverId page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>driver-id</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+  <div class="profile">
+    <ion-avatar>
+      <img src="assets/imgs/Untitled-20.png">
+    </ion-avatar>
+
+    <input type="file" name="userpic" id="userpic" style="display: none;" accept="image/x-png, image/gif, image/jpeg">
+    <label for="userpic"></label>
+  </div>
+
+  <ion-grid>
+    <br>
+    <ion-row>
+      <h5 color="primary">Add ID Photo.</h5>
+      <ion-icon class="arrow" color="primary" ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle" [navPush]="pushPage"></ion-icon>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <img src="assets/imgs/camera.png">
+      </ion-col>
+      <ion-col>
+        <img src="assets/imgs/camera.png">
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+  <hr>
+</ion-content>
