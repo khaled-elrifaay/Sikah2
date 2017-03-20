@@ -21,7 +21,10 @@ import {PasswordPagePage} from '../pages/password-page/password-page';
 import {MobilePagePage} from '../pages/mobile-page/mobile-page';
 import {TranslateModule, TranslateStaticLoader, TranslateLoader} from "ng2-translate";
 import {ActiveCodePagePage} from "../pages/active-code-page/active-code-page";
-
+import {DriverLicensePage} from "../pages/driver-license/driver-license";
+import {DriverIdPage} from "../pages/driver-id/driver-id";
+import {DriverCarPage} from "../pages/driver-car/driver-car";
+import {BeforeLoginPage} from "../pages/before-login/before-login";
 export function createTranslateLoader(http: any) {
     return new TranslateStaticLoader(http, 'assets/i18n', '.json');
 }
@@ -45,7 +48,11 @@ export function createTranslateLoader(http: any) {
     SignupPage,
     EmailPagePage,
     PasswordPagePage,
-    ActiveCodePagePage
+    ActiveCodePagePage,
+    DriverLicensePage,
+    DriverIdPage,
+    DriverCarPage,
+    BeforeLoginPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),TranslateModule.forRoot(),
@@ -74,8 +81,12 @@ export function createTranslateLoader(http: any) {
     EmailPagePage,
     PasswordPagePage,
     MobilePagePage,
-    ActiveCodePagePage
+    ActiveCodePagePage,
+    DriverLicensePage,
+    DriverIdPage,
+    DriverCarPage,
+    BeforeLoginPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},GlobalService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}

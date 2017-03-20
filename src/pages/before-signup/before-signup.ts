@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {SignupPage} from '../user-signup/signup';
+import {BeforeLoginPage} from '../before-login/before-login';
 /*
   Generated class for the BeforeSignup page.
 
@@ -19,6 +19,12 @@ export class BeforeSignupPage {
     console.log('ionViewDidLoad BeforeSignupPage');
   }
 gotousersign(){
-  this.navCtrl.push(SignupPage);
+  this.navCtrl.push(BeforeLoginPage);
 }
+/*
+goToDrioverSign(){
+  this.navCtrl.push(DriverNamePage);
+}
+*/
+
 }

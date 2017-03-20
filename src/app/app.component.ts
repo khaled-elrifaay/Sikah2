@@ -13,7 +13,7 @@ import { Canceled } from '../pages/canceled/canceled';
 import { Payment } from '../pages/payment/payment';
 import { Sum } from '../pages/sum/sum';
 import {BeforeSignupPage} from '../pages/before-signup/before-signup';
-
+import { DriverIdPage } from '../pages/driver-id/driver-id';
 
 @Component({
   templateUrl: 'app.html'
@@ -41,6 +41,7 @@ export class MyApp {
       { title: 'Payment', component: Payment },
       { title: 'Summary', component: Sum },
       { title: 'Lang', component: Lang },
+      { title: 'DriverIdPage', component: DriverIdPage },
       { title: 'Sign-up', component: BeforeSignupPage }
     ];
 

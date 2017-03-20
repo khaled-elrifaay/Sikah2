@@ -1,3 +1,37 @@
 page-active-code-page {
-
+  ion-avatar {
+    border: 1px solid white;
+    width: 120px;
+    border-radius: 46px;
+    margin-left: 138px;
+    margin-top: 43px;
+  }
+  .list-md {
+    margin: 18px 0 16px 0;
+  }
+  .profile {
+    margin-top: -40px;
+    background-color: #390c2b;
+    padding: 10px;
+    width: 420px;
+    margin-left: -19px;
+  }
+  .input-wrapper {
+    border: 1px solid #390c2b;
+  }
+  .arrow {
+    font-size: 3.2em;
+    margin-left: 42%;
+    margin-top: inherit;
+  }
+  .grid {
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: inherit;
+  }
+  .number{
+    border: 1px solid #390c2b;
+  }
 }
