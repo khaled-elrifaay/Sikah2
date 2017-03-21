@@ -24,16 +24,21 @@
                accept="image/x-png, image/gif, image/jpeg"><label for="userpic"></label>
 
     </div>
-<ion-grid>
-    <ion-row>
-        <h5 color="primary">Enter Your Mobile.</h5>
-    </ion-row>
-    <ion-row>
-<ion-input class="mobile" type="text" placeholder="mobile"></ion-input>  <ion-icon class="arrow" color="primary" ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle" (click)="gotoactivecode()" ></ion-icon>
-    </ion-row>
-    <br>
-    <ion-row>
-        <h5 color="primary">You will recieve active code by SMS now.</h5>
-    </ion-row>
-  </ion-grid>
+<form #f="ngForm">
+    <ion-grid>
+        <ion-row>
+            <h5 color="primary">Enter Your Mobile.</h5>
+        </ion-row>
+        <ion-row>
+            <ion-input class="mobile" type="text" placeholder="mobile" name="mobile" [(ngModel)]="user.mobile" required></ion-input>
+            <button [disabled]="!f.valid" type="submit" item-right>
+                <ion-icon class="arrow" color="primary" ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle" (click)="gotoactivecode()" ></ion-icon>
+            </button>
+        </ion-row>
+        <br>
+        <ion-row>
+            <h5 color="primary">You will recieve active code by SMS now.</h5>
+        </ion-row>
+      </ion-grid>
+</form>
 </ion-content>

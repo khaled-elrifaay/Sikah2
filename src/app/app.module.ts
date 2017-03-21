@@ -25,6 +25,7 @@ import {DriverLicensePage} from "../pages/driver-license/driver-license";
 import {DriverIdPage} from "../pages/driver-id/driver-id";
 import {DriverCarPage} from "../pages/driver-car/driver-car";
 import {BeforeLoginPage} from "../pages/before-login/before-login";
+import {DriverCarLicensePage} from "../pages/driver-car-license/driver-car-license";
 export function createTranslateLoader(http: any) {
     return new TranslateStaticLoader(http, 'assets/i18n', '.json');
 }
@@ -52,7 +53,8 @@ export function createTranslateLoader(http: any) {
     DriverLicensePage,
     DriverIdPage,
     DriverCarPage,
-    BeforeLoginPage
+    BeforeLoginPage,
+    DriverCarLicensePage
   ],
   imports: [
     IonicModule.forRoot(MyApp),TranslateModule.forRoot(),
@@ -85,8 +87,9 @@ export function createTranslateLoader(http: any) {
     DriverLicensePage,
     DriverIdPage,
     DriverCarPage,
-    BeforeLoginPage
+    BeforeLoginPage,
+    DriverCarLicensePage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},GlobalService]
 })
 export class AppModule {}

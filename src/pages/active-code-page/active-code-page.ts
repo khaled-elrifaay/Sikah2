@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import { GlobalService} from '../../providers/global-service';
+import { NgForm} from '@angular/forms';
 /*
   Generated class for the ActiveCodePage page.
 
@@ -12,11 +13,23 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'active-code-page.html'
 })
 export class ActiveCodePagePage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  private user ;
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              private globalService :GlobalService ) {
+    this.user = navParams.data;
+    console.log(this.user);
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ActiveCodePagePage');
   }
-
+  userConfirmation(code)
+  {
+     return this.globalService.userConfirmCode(this.user.userid,code).subscribe(
+       (res) => {
+          console.log(res);
+       }
+     );
+  }
+  
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {ActiveCodePagePage} from "../active-code-page/active-code-page";
+import {GlobalService} from "../../providers/global-service";
 /*
   Generated class for the MobilePage page.
 
@@ -12,13 +13,20 @@ import {ActiveCodePagePage} from "../active-code-page/active-code-page";
   templateUrl: 'mobile-page.html'
 })
 export class MobilePagePage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  public user;
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              private globalService : GlobalService) {
+        this.user = navParams.data;
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MobilePagePage');
   }
   gotoactivecode(){
-    this.navCtrl.push(ActiveCodePagePage);
+    this.globalService.userSignUp(this.user).subscribe(
+      (user)=>{
+        this.navCtrl.push(ActiveCodePagePage,user); 
+      }
+    );   
   }
 }

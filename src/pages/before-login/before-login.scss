@@ -1,3 +1,22 @@
 page-before-login {
-
+  ion-avatar {
+    border: 1px solid white;
+    width: 100px;
+    border-radius: 64px;
+    margin-left: 138px;
+    margin-top: 31px;
+  }
+  .list-md {
+    margin: 18px 0 16px 0;
+  }
+  .profile {
+    margin-top: -40px;
+    background-color: #390c2b;
+    padding: 10px;
+    width: 420px;
+    margin-left: -19px;
+  }
+  .btn{
+    border : 1px solid #390c2b;
+  }
 }

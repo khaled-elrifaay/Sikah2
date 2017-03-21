@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {EmailPagePage} from "../email-page/email-page";
+import {SignupPage} from "../user-signup/signup";
 
 /*
   Generated class for the BeforeLogin page.
@@ -12,8 +14,14 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'before-login.html'
 })
 export class BeforeLoginPage {
+  public pushLogin ;
+  public pushSignUp ;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams)
+  {
+    this.pushLogin = EmailPagePage ;
+    this.pushSignUp = SignupPage ;
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BeforeLoginPage');

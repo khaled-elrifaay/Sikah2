@@ -12,13 +12,16 @@ import { MobilePagePage } from '../mobile-page/mobile-page';
   templateUrl: 'password-page.html'
 })
 export class PasswordPagePage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  public user;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = navParams.data;
+    console.log(this.user);
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PasswordPagePage');
   }
 gotomobile(){
-  this.navCtrl.push(MobilePagePage);
+  this.navCtrl.push(MobilePagePage,this.user);
 }
 }
