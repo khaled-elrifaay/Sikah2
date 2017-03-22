@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { GlobalService} from '../../providers/global-service';
-import { NgForm} from '@angular/forms';
+import { GlobalService } from '../../providers/global-service';
+import { NgForm } from '@angular/forms';
+import { CustomToast } from '../../general-components/toast.component';
+
 /*
   Generated class for the ActiveCodePage page.
 
@@ -13,11 +15,12 @@ import { NgForm} from '@angular/forms';
   templateUrl: 'active-code-page.html'
 })
 export class ActiveCodePagePage {
-  private user ;
+  private res ;
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              private globalService :GlobalService ) {
-    this.user = navParams.data;
-    console.log(this.user);
+              private globalService :GlobalService ,
+              private customToast : CustomToast) {
+    this.res = navParams.data;
+    console.log(this.res);
   }
 
   ionViewDidLoad() {
@@ -25,11 +28,53 @@ export class ActiveCodePagePage {
   }
   userConfirmation(code)
   {
-     return this.globalService.userConfirmCode(this.user.userid,code).subscribe(
+    // driver 1
+    // user 0
+     if(this.res.type == 0)
+     {
+        this.userConfirm(code);
+     }
+     else
+     {
+        this.driverConfirm(code);
+     }
+
+  }
+
+  userConfirm(code)
+  {
+      return this.globalService.userConfirmCode(this.res.user.userid,code).subscribe(
        (res) => {
-          console.log(res);
+         if(res.confirm == 1)
+         {
+
+         }
+         else
+         {
+            console.log(res.error);
+            this.customToast.toast(res.error);
+         }
+          
        }
      );
   }
+  driverConfirm(code)
+  {
+    return this.globalService.driverConfirmCode(this.res.driver.driversid,code).subscribe(
+       (res) => {
+         if(res.confirm == 1)
+         {
+
+         }
+         else
+         {
+            console.log(res.error);
+            this.customToast.toast(res.error);
+         }
+          
+       }
+     );
+  }
+  
   
 }

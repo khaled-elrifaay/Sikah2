@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {ActiveCodePagePage} from "../active-code-page/active-code-page";
+import { MobilePagePage} from "../mobile-page/mobile-page";
 
 /*
   Generated class for the DriverCarLicense page.
@@ -14,9 +14,12 @@ import {ActiveCodePagePage} from "../active-code-page/active-code-page";
 })
 export class DriverCarLicensePage {
   public pushPage;
+  public user ;
   constructor(public navCtrl: NavController, public navParams: NavParams)
   {
-    this.pushPage = ActiveCodePagePage;
+    this.user = navParams.data;
+    this.pushPage = MobilePagePage;
+    
   }
 
   ionViewDidLoad() {

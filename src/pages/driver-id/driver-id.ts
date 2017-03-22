@@ -13,7 +13,10 @@ import {DriverLicensePage} from '../driver-license/driver-license';
 })
 export class DriverIdPage {
   public pushPage;
+  public user ;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = navParams.data;
+    console.log(this.user);
     this.pushPage = DriverLicensePage;
   }
 

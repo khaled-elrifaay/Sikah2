@@ -23,6 +23,6 @@
 </div>
 
   <br>
-  <button class="btn" ion-button full clear [navPush]="pushLogin"> Login</button>
-  <button class="btn" ion-button full clear [navPush]="pushSignUp"> Sign up</button>
+  <button class="btn" ion-button full clear [navPush]="pushLogin" [navParams]="user"> Login</button>
+  <button class="btn" ion-button full clear [navPush]="pushSignUp" [navParams]="user"> Sign up</button>
 </ion-content>

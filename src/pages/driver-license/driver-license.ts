@@ -13,11 +13,12 @@ import {DriverCarPage} from "../driver-car/driver-car";
   templateUrl: 'driver-license.html'
 })
 export class DriverLicensePage {
-
+  public user;
   public pushPage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-
+    this.user = navParams.data;
     this.pushPage = DriverCarPage;
+    
 
   }
 

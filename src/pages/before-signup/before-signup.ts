@@ -12,14 +12,30 @@ import {BeforeLoginPage} from '../before-login/before-login';
   templateUrl: 'before-signup.html'
 })
 export class BeforeSignupPage {
-
+  public user = {
+    first_name : null,
+    last_name : null ,
+    mobile : null ,
+    email : null ,
+    password : null,
+    type : null,
+    id_front : null,
+    id_back : null ,
+    licence_front : null,
+    licence_back : null,
+    car_front : null ,
+    car_back : null
+  };
+  readonly driverType = 1;
+  readonly userType = 0;
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BeforeSignupPage');
   }
-gotousersign(){
-  this.navCtrl.push(BeforeLoginPage);
+gotousersign(type:boolean){
+  this.user.type = type;
+  this.navCtrl.push(BeforeLoginPage,this.user);
 }
 /*
 goToDrioverSign(){

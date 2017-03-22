@@ -12,6 +12,9 @@ import 'rxjs/add/operator/map';
 export class GlobalService {
   public userSignUp_url : string = "http://sikkh.com/ws/signup/user";
   public userConfirmCode_url : string = "http://sikkh.com/ws/confirm/user";
+  public driverSignUp_url : string = "http://sikkh.com/ws/signup/driver";
+  public driverConfirmCode_url : string = "http://sikkh.com/ws/confirm/driver" ;
+  
   
   constructor(public http: Http) {
     console.log('Hello GlobalService Provider');
@@ -21,7 +24,18 @@ export class GlobalService {
  {
    return this.http.post(this.userSignUp_url,user).map((res) => res.json());
  }
-
+ driverSignUp(driver:any)
+ {
+   return this.http.post(this.driverSignUp_url,driver).map((res) => res.json());
+ }
+driverConfirmCode(driversid: any,code: any)
+{
+  var driverData = {
+      code : code,
+      driversid : driversid
+  };
+  return this.http.post(this.driverConfirmCode_url,driverData).map((res) => res.json());
+}
 userConfirmCode(userid: any,code: any)
 {
   var userData = {

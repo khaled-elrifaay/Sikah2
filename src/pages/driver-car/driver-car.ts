@@ -15,7 +15,9 @@ import {DriverCarLicensePage} from "../driver-car-license/driver-car-license";
 })
 export class DriverCarPage {
   public pushPage;
+  public user;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = navParams.data;
     this.pushPage = DriverCarLicensePage;
 
   }

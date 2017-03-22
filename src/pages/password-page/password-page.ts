@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { MobilePagePage } from '../mobile-page/mobile-page';
+import { DriverIdPage } from '../driver-id/driver-id';
 /*
   Generated class for the PasswordPage page.
 
@@ -22,6 +23,16 @@ export class PasswordPagePage {
     console.log('ionViewDidLoad PasswordPagePage');
   }
 gotomobile(){
-  this.navCtrl.push(MobilePagePage,this.user);
+  // 0 determine user
+  // 1 determine driver
+  if(this.user.type == 0)
+  {
+    this.navCtrl.push(MobilePagePage,this.user);
+  }
+  else
+  {
+    this.navCtrl.push(DriverIdPage,this.user);
+  }
+  
 }
 }

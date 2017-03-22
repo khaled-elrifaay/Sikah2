@@ -14,11 +14,13 @@ import {SignupPage} from "../user-signup/signup";
   templateUrl: 'before-login.html'
 })
 export class BeforeLoginPage {
+  public user ;
   public pushLogin ;
   public pushSignUp ;
 
   constructor(public navCtrl: NavController, public navParams: NavParams)
   {
+    this.user = navParams.data;
     this.pushLogin = EmailPagePage ;
     this.pushSignUp = SignupPage ;
   }

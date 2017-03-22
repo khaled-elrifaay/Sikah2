@@ -16,15 +16,14 @@ import {EmailPagePage} from '../email-page/email-page';
 })
 export class SignupPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  public user;
+  constructor(public navCtrl: NavController, public navParams: NavParams) 
+  {
+    this.user = navParams.data;
+    console.log(this.user);
+  }
 
-  public user = {
-    first_name : null,
-    last_name : null ,
-    mobile : null ,
-    email : null ,
-    password : null
-  };
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPage');
   }
