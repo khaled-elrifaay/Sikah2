@@ -32,10 +32,10 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <img src="assets/imgs/camera.png">
+        <img src="assets/imgs/camera.png" (click)="takeFrontImage()">
       </ion-col>
       <ion-col>
-        <img src="assets/imgs/camera.png">
+        <img src="assets/imgs/camera.png" (click)="takeBackImage()">
       </ion-col>
     </ion-row>
 
@@ -44,13 +44,13 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <img src="assets/imgs/camera.png">
+        <img [src]="id_front" *ngIf="id_front">
       </ion-col>
       <ion-col>
-        <img src="assets/imgs/camera.png">
+        <img [src]="id_back" *ngIf="id_back">
       </ion-col>
     </ion-row> 
   </ion-grid>
-  <hr><hr>
+  <hr>
 
 </ion-content>
