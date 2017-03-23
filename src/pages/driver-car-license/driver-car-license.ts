@@ -19,7 +19,6 @@ export class DriverCarLicensePage {
   {
     this.user = navParams.data;
     this.pushPage = MobilePagePage;
-    
   }
 
   ionViewDidLoad() {

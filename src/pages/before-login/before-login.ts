@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Self} from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {EmailPagePage} from "../email-page/email-page";
 import {SignupPage} from "../user-signup/signup";
@@ -17,16 +17,26 @@ export class BeforeLoginPage {
   public user ;
   public pushLogin ;
   public pushSignUp ;
-
+  public static readonly signupCode = 0;
+  public static readonly loginCode = 1;
   constructor(public navCtrl: NavController, public navParams: NavParams)
   {
     this.user = navParams.data;
     this.pushLogin = EmailPagePage ;
     this.pushSignUp = SignupPage ;
   }
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad BeforeLoginPage');
+  }
+  goToLogin()
+  {
+    this.user.operation = BeforeLoginPage.loginCode;
+    this.navCtrl.push(this.pushLogin,this.user);
+  }
+  goToSignup()
+  {
+    this.user.operation = BeforeLoginPage.signupCode;
+    this.navCtrl.push(this.pushSignUp,this.user);
   }
 
 }

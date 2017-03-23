@@ -37,7 +37,7 @@
         </ion-row>
         <br>
         <ion-row>
-            <h5 color="primary">You will recieve active code by SMS now.</h5>
+            <h5 color="primary" *ngIf="user.operation != BeforeLoginPage.loginCode">You will recieve active code by SMS now.</h5>
         </ion-row>
       </ion-grid>
 </form>

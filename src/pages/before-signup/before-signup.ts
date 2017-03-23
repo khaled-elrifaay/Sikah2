@@ -19,6 +19,7 @@ export class BeforeSignupPage {
     email : null ,
     password : null,
     type : null,
+    operation : null ,
     id_front : null,
     id_back : null ,
     licence_front : null,
@@ -26,8 +27,9 @@ export class BeforeSignupPage {
     car_front : null ,
     car_back : null
   };
-  readonly driverType = 1;
-  readonly userType = 0;
+  public static readonly userType = 0;
+  public static readonly driverType = 1;
+  public BeforeSignupPage = BeforeSignupPage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {

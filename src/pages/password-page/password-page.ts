@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { MobilePagePage } from '../mobile-page/mobile-page';
 import { DriverIdPage } from '../driver-id/driver-id';
+import {BeforeSignupPage} from "../before-signup/before-signup";
+import {BeforeLoginPage} from "../before-login/before-login";
+
 /*
   Generated class for the PasswordPage page.
 
@@ -25,7 +28,9 @@ export class PasswordPagePage {
 gotomobile(){
   // 0 determine user
   // 1 determine driver
-  if(this.user.type == 0)
+  if(this.user.type == BeforeSignupPage.userType ||
+      (this.user.type == BeforeSignupPage.driverType &&
+      this.user.operation == BeforeLoginPage.loginCode ))
   {
     this.navCtrl.push(MobilePagePage,this.user);
   }
