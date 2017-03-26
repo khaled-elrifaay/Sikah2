@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>mobile</ion-title>
+    <ion-title>SIKKH</ion-title>
 
   </ion-navbar>
 
@@ -27,7 +27,9 @@
 <form #f="ngForm">
     <ion-grid>
         <ion-row>
-            <h5 color="primary">Enter Your Mobile.</h5>
+            <h3 color="primary">
+                Welcome Back,<br>
+                Enter Your Mobile.</h3>
         </ion-row>
         <ion-row>
             <ion-input class="mobile" type="text" placeholder="mobile" name="mobile" [(ngModel)]="user.mobile" required></ion-input>
@@ -37,7 +39,7 @@
         </ion-row>
         <br>
         <ion-row>
-            <h5 color="primary" *ngIf="user.operation != BeforeLoginPage.loginCode">You will recieve active code by SMS now.</h5>
+            <h5 color="primary" style="padding-top: 15px" *ngIf="user.operation != BeforeLoginPage.loginCode">You will recieve active code by SMS now.</h5>
         </ion-row>
       </ion-grid>
 </form>

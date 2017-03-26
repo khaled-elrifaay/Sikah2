@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {DriverCarPage} from "../driver-car/driver-car";
 import { Camera } from 'ionic-native';
+
 /*
   Generated class for the DriverLicense page.
 
