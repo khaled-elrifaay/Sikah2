@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>activeCode</ion-title>
+    <ion-title>SIKKH</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -24,14 +24,17 @@
 <form #f="ngForm">
   <ion-grid>
     <ion-row>
-      <h5 color="primary">Enter the code you recieved.</h5>
+      <h3 color="primary">Enter the code you recieved.</h3>
     </ion-row>
+
     <ion-row>
       <ion-input class="number" type="number" name="code" ngModel required></ion-input>
       <button [disabled]="!f.valid" type="submit" (click)="userConfirmation(f.value.code)">
         <ion-icon class="arrow" color="primary" ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle" ></ion-icon>
       </button>
-
+    </ion-row>
+    <ion-row>
+      <button ion-button clear style="margin-left: -16px;padding-top: 5px">Resend Active Code Again</button>
     </ion-row>
   </ion-grid>
 </form>

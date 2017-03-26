@@ -6,9 +6,17 @@
 -->
 <ion-header>
 
-  <ion-navbar color="primary">
-    <ion-title>email-page</ion-title>
-  </ion-navbar>
+
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>SIKKH</ion-title>
+    </ion-navbar>
+
+  <!--<ion-navbar color="primary">-->
+    <!--<ion-title>email-page</ion-title>-->
+  <!--</ion-navbar>-->
 
 </ion-header>
 
@@ -25,14 +33,19 @@
 <form #f="ngForm">
   <ion-grid>
     <ion-row>
-        <h5 color="primary">Enter Your Email.</h5>
+
+        <h3 color="primary">
+            Welcome Back,<br>
+            Enter Your Email.
+        </h3>
     </ion-row>
-    <ion-row>
+
+      <ion-row>
         <ion-input class="email" type="text" name="email" placeholder="email@gmail.com" ngModel required></ion-input>
         <button  [disabled]="!f.valid" type="submit" item-right (click)="addEmail(f)">
             <ion-icon  class="arrow" color="primary" ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
         </button>
-    </ion-row>
+      </ion-row>
     </ion-grid>
 </form>
 </ion-content>

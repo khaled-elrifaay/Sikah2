@@ -1,8 +1,8 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    
-    <ion-title>signup</ion-title>
+
+    <ion-title>Breakdown</ion-title>
   </ion-navbar>
 
 
@@ -19,16 +19,17 @@
     </div>
     <form #f="ngForm">
         <ion-list>
-        <ion-item>
-            <ion-input type="text" placeholder="firstname" name="firstname" ngModel required></ion-input>
-            <ion-input type="text" placeholder="lastname" name="lastname" ngModel required></ion-input>
-        </ion-item >
-        <ion-item>
-            <button [disabled]="!f.valid" type="submit" item-right>
-                <ion-icon  class="arrow" color="primary" ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle" (click)="gotoemail(f)" ></ion-icon>
-            </button>
-        </ion-item>
-
+            <ion-item>
+                <ion-input class="sign" type="text" placeholder="Firstname" name="firstname" ngModel required style="border-right:2px solid #390C2B;"></ion-input>
+                <ion-input class="sign" type="text" placeholder="Lastname" name="lastname" ngModel required></ion-input>
+            </ion-item >
         </ion-list>
+
+        <button [disabled]="!f.valid" type="submit" item-right>
+            <ion-icon  class="arrow" color="primary" ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle" (click)="gotoemail(f)" ></ion-icon>
+        </button>
+
+
+
     </form>
 </ion-content>
