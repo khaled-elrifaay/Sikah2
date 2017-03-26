@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>driver-car-lisence</ion-title>
+    <ion-title>SIKKH</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -26,19 +26,20 @@
 
   <ion-grid>
     <ion-row>
-        <ion-item>
+
           <h5 color="primary">Add Car License Photo.</h5>
           <ion-icon class="arrow" color="primary" ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle" [navPush]="pushPage" [navParams]="user" item-right></ion-icon>
-        </ion-item>
+
      </ion-row>
     <ion-row>
-      <ion-col>
+      <ion-col class="signbord" style="border-right: 3px solid #390c2b ;">
+        <span>Front</span>
         <img src="assets/imgs/camera.png">
       </ion-col>
-      <ion-col>
+      <ion-col class="signbord">
+        <span>Back</span>
         <img src="assets/imgs/camera.png">
       </ion-col>
     </ion-row>
   </ion-grid>
-  <hr>
 </ion-content>

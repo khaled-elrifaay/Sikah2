@@ -3,7 +3,8 @@ page-driver-id {
     border: 1px solid white;
     width: 100px;
     border-radius: 64px;
-    margin-left: 138px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 31px;
   }
   .list-md {
@@ -13,18 +14,22 @@ page-driver-id {
     margin-top: -40px;
     background-color: #390c2b;
     padding: 10px;
-    width: 420px;
+    width: 113%;
     margin-left: -19px;
-  }
-  hr {
-    height: 2px;
-    border-width: 0;
-    box-sizing: content-box;
-    background-color: #390c2b !important;
+    margin-bottom: 30px;
   }
   .arrow {
     font-size: 3.2em;
     margin-left: 42%;
-    margin-top: inherit;
+    margin-top: -10px;
+  }
+  .signbord{
+    border-bottom: 3px solid #390c2b;
+    text-align: center;
+  }
+  span{
+    display: block;
+    text-align: center;
+    font-size:1em;
   }
 }

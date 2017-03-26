@@ -3,7 +3,8 @@ page-driver-car-license {
     border: 1px solid white;
     width: 100px;
     border-radius: 64px;
-    margin-left: 138px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 31px;
   }
   .list-md {
@@ -13,23 +14,29 @@ page-driver-car-license {
     margin-top: -40px;
     background-color: #390c2b;
     padding: 10px;
-    width: 420px;
+    width: 113%;
     margin-left: -19px;
+    margin-bottom: 43px;
   }
   h5 {
     font-size: 1.8rem !important;
     font-weight: 500 !important;
     line-height: 1.2 !important;
   }
-  hr {
-    height: 2px;
-    border-width: 0;
-    box-sizing: content-box;
-    background-color: #390c2b !important;
-  }
+
   .arrow {
     font-size: 3.2em;
-    margin-left: 42%;
-    margin-top: inherit;
+    margin-left: 30%;
+    margin-top: -10px;
   }
+  .signbord{
+    border-bottom: 3px solid #390c2b;
+    text-align: center;
+  }
+  span{
+    display: block;
+    text-align: center;
+    font-size:1em;
+  }
+
 }
