@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import {Nav, Platform, AlertController} from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 import { Splash } from '../pages/splash/splash';
 import { Lang } from '../pages/lang/lang';
@@ -14,18 +14,33 @@ import { Payment } from '../pages/payment/payment';
 import { Sum } from '../pages/sum/sum';
 import {BeforeSignupPage} from '../pages/before-signup/before-signup';
 import { DriverIdPage } from '../pages/driver-id/driver-id';
+import {BeforeLoginPage} from "../pages/before-login/before-login";
+import {GlobalService} from "../providers/global-service";
+import {Storage} from '@ionic/storage';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-
+  public user;
   rootPage: any = Lang;
 
   pages: Array<{title: string, component: any}>;
+  pageslogged: Array<{title: string, icon: string, component: any}>;
 
-  constructor(public platform: Platform) {
+  constructor(public platform: Platform,public alertCtrl: AlertController,public globalService : GlobalService,
+      public storage: Storage) {
+    this.storage.get('USERKey').then((res) => {
+      if (res != null) {
+        this.globalService.user = JSON.parse(res);
+        this.globalService.loggedIn = true;
+      }
+
+    });
+
+
+
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -42,9 +57,14 @@ export class MyApp {
       { title: 'Summary', component: Sum },
       { title: 'Lang', component: Lang },
       { title: 'DriverIdPage', component: DriverIdPage },
-      { title: 'Sign-up', component: BeforeSignupPage }
+      { title: 'Sign-up', component: BeforeSignupPage },
+      { title: 'Sign-Out', component: BeforeSignupPage },
     ];
+  this.pageslogged = [
+    { title: 'Home', icon: 'home',component: Home },
+    { title: 'sign-In', icon: 'home',component: BeforeSignupPage },
 
+  ]
   }
 
   initializeApp() {
@@ -57,8 +77,26 @@ export class MyApp {
   }
 
   openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+
+    /*if (this.globalService.loggedIn) {
+      /!*this.user = this.globalService.user.username;*!/
+      console.log(this.user)
+    }*/
+    if (page.title == 'Sign-Out') {
+      this.globalService.logout();
+      this.showAlert();
+    } else {
+      this.nav.push(page.component);
+    }
+  }
+  showAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'logged out'
+      /*/!*this.globalService.language == 'en' ? 'Logged out' : *!/'تسجيل الخروج'*/,
+      subTitle:
+      /*this.globalService.language == 'en' ? 'Logged out successfully!' : */'تم تسجيل الخروج بنجاح!',
+      buttons: [/*this.globalService.language == 'en' ? 'OK' : */'حسناً']
+    });
+    alert.present();
   }
 }

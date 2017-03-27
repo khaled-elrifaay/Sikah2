@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { GlobalService } from '../../providers/global-service';
 import { NgForm } from '@angular/forms';
 import { CustomToast } from '../../general-components/toast.component';
+import {Home} from "../home/home";
 
 /*
   Generated class for the ActiveCodePage page.
@@ -47,7 +48,8 @@ export class ActiveCodePagePage {
        (res) => {
          if(res.confirm == 1)
          {
-
+             this.globalService.setUser(res);
+             this.navCtrl.setRoot(Home);
          }
          else
          {
@@ -64,7 +66,8 @@ export class ActiveCodePagePage {
        (res) => {
          if(res.confirm == 1)
          {
-
+             this.globalService.setUser(res);
+             this.navCtrl.setRoot(Home);
          }
          else
          {

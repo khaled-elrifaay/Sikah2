@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import {PasswordPagePage} from '../password-page/password-page';
 import {Arrived} from "../arrived/arrived";
 import {NgForm} from "@angular/forms";
+import {BeforeLoginPage} from "../before-login/before-login";
 
 /*
   Generated class for the EmailPage page.
@@ -17,6 +18,7 @@ import {NgForm} from "@angular/forms";
 export class EmailPagePage {
   public pushPage;
   public user;
+  public BeforeLoginPage = BeforeLoginPage ;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.pushPage = PasswordPagePage;
     this.user = navParams.data;

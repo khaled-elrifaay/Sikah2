@@ -5,6 +5,7 @@ import {GlobalService} from "../../providers/global-service";
 import { CustomToast } from '../../general-components/toast.component';
 import { BeforeSignupPage} from '../before-signup/before-signup';
 import { BeforeLoginPage} from '../before-login/before-login';
+import {Home} from "../home/home";
 /*
   Generated class for the MobilePage page.
 
@@ -67,6 +68,8 @@ export class MobilePagePage {
                 if(driver.driversid)
                 {
                     this.customToast.toast("success driver login");
+                    this.globalService.setUser(driver);
+                    this.navCtrl.setRoot(Home);
                     console.log(driver);
                 }
                 else
@@ -83,6 +86,8 @@ export class MobilePagePage {
                 if(user.userid)
                 {
                     this.customToast.toast("success user login");
+                    this.globalService.setUser(user);
+                    this.navCtrl.setRoot(Home);
                     console.log(user);
                 }
                 else

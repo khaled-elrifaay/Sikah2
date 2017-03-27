@@ -27,6 +27,7 @@ import {DriverCarPage} from "../pages/driver-car/driver-car";
 import {BeforeLoginPage} from "../pages/before-login/before-login";
 import {DriverCarLicensePage} from "../pages/driver-car-license/driver-car-license";
 import { CustomToast } from "../general-components/toast.component";
+import { IonicStorageModule } from '@ionic/storage';
 export function createTranslateLoader(http: any) {
     return new TranslateStaticLoader(http, 'assets/i18n', '.json');
 }
@@ -59,6 +60,7 @@ export function createTranslateLoader(http: any) {
   ],
   imports: [
     IonicModule.forRoot(MyApp),TranslateModule.forRoot(),
+    IonicStorageModule.forRoot(),
      TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),
