@@ -20,12 +20,21 @@ export class GlobalService {
   public driverConfirmCode_url : string = "http://sikkh.com/ws/confirm/driver" ;
   public userLogin_url : string = "http://sikkh.com/ws/login/user";
   public driverLogin_url : string = "http://sikkh.com/ws/login/driver";
+  public userResendCode_url : string ="http://sikkh.com/ws/resend/code";
+  public driverResendCode_url :string = "http://sikkh.com/ws/resend/driver";
   
   constructor(public http: Http,public storage: Storage,) {
     console.log('Hello GlobalService Provider');
 
   }
-
+    userResendCode(user :any)
+    {
+        return this.http.post(this.userResendCode_url,user).map((res) => res.json());
+    }
+    driverResendCode(driver :any)
+    {
+        return this.http.post(this.driverResendCode_url,driver).map((res) => res.json());
+    }
     userLogin(user: any)
     {
         return this.http.post(this.userLogin_url,user).map((res) => res.json());
