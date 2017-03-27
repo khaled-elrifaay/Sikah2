@@ -39,7 +39,6 @@ export class DriverIdPage {
     //this.takePicture(this.back);
    this.galleryOrCamera(this.back); 
   }
- 
   galleryOrCamera(type:any) {
     let confirm = this.alertCtrl.create({
       title:  'Choose method',
@@ -61,8 +60,6 @@ export class DriverIdPage {
     });
     confirm.present();
   }
-
-
   pickPicture(type:any) {
     //noinspection TypeScriptUnresolvedVariable
     Camera.getPicture({
