@@ -6,9 +6,15 @@
   </ion-header>
 
   <ion-content>
-    <ion-list>
+    <ion-list *ngIf="globalService.loggedIn">
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
+      </button>
+    </ion-list>
+    <ion-list *ngIf="!globalService.loggedIn">
+      <button  menuClose ion-item *ngFor="let p of pageslogged" (click)="openPage(p)">
+        <ion-icon name="{{p.icon}}"></ion-icon>
+        {{p.title|translate}}
       </button>
     </ion-list>
   </ion-content>

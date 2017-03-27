@@ -17,6 +17,7 @@ import {BeforeLoginPage} from "../before-login/before-login";
 })
 export class PasswordPagePage {
   public user;
+  public BeforeLoginPage = BeforeLoginPage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.user = navParams.data;
     console.log(this.user);

@@ -35,7 +35,7 @@
     <ion-row>
 
         <h3 color="primary">
-            Welcome Back,<br>
+            <span *ngIf="user.operation == BeforeLoginPage.loginCode">Welcome Back,<br></span>
             Enter Your Email.
         </h3>
     </ion-row>

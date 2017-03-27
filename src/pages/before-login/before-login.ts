@@ -22,11 +22,17 @@ export class BeforeLoginPage {
   constructor(public navCtrl: NavController, public navParams: NavParams)
   {
     this.user = navParams.data;
+   // this.resetUserObj();
     this.pushLogin = EmailPagePage ;
     this.pushSignUp = SignupPage ;
   }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad BeforeLoginPage');
+  ionViewWillEnter()
+  {
+    this.user.password = null;
+    this.user.mobile = null;
+    this.user.first_name = null;
+    this.user.last_name = null;
+    this.user.email = null;
   }
   goToLogin()
   {

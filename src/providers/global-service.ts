@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import {Storage} from '@ionic/storage';
 import 'rxjs/add/operator/map';
 
 /*
@@ -10,6 +11,9 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class GlobalService {
+    public loggedIn: boolean = false;
+    public user: any;
+
   public userSignUp_url : string = "http://sikkh.com/ws/signup/user";
   public userConfirmCode_url : string = "http://sikkh.com/ws/confirm/user";
   public driverSignUp_url : string = "http://sikkh.com/ws/signup/driver";
@@ -17,8 +21,9 @@ export class GlobalService {
   public userLogin_url : string = "http://sikkh.com/ws/login/user";
   public driverLogin_url : string = "http://sikkh.com/ws/login/driver";
   
-  constructor(public http: Http) {
+  constructor(public http: Http,public storage: Storage,) {
     console.log('Hello GlobalService Provider');
+
   }
 
     userLogin(user: any)
@@ -53,5 +58,20 @@ export class GlobalService {
     };
   return this.http.post(this.userConfirmCode_url,userData).map((res) => res.json());
 }
+    setUser(user: any) {
+        this.loggedIn = true;
+        this.storage.set("USERKey", JSON.stringify(user));
+        this.user = user;
+        console.log(user);
+
+    }
+
+    getUser() {
+        return this.storage.get("USERKey");
+    }
+    logout() {
+        this.loggedIn = false;
+        this.storage.set("USERKey", null);
+    }
 
 }

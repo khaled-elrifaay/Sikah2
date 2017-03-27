@@ -39,10 +39,6 @@ gotousersign(type:boolean){
   this.user.type = type;
   this.navCtrl.push(BeforeLoginPage,this.user);
 }
-/*
-goToDrioverSign(){
-  this.navCtrl.push(DriverNamePage);
-}
-*/
+
 
 }
