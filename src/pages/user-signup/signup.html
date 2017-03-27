@@ -18,16 +18,24 @@
         <label for="userpic"></label>
     </div>
     <form #f="ngForm">
-        <ion-list>
-            <ion-item>
-                <ion-input class="sign" type="text" placeholder="Firstname" name="firstname" ngModel required style="border-right:2px solid #390C2B;"></ion-input>
-                <ion-input class="sign" type="text" placeholder="Lastname" name="lastname" ngModel required></ion-input>
-            </ion-item >
-        </ion-list>
+        <ion-grid>
+            <ion-row style="width:100%">
+                <ion-list>
+                    <ion-item>
+                        <ion-input class="sign" type="text" placeholder="Firstname" name="firstname" ngModel required style="border-right:2px solid #390C2B;"></ion-input>
+                        <ion-input class="sign" type="text" placeholder="Lastname" name="lastname" ngModel required></ion-input>
+                    </ion-item >
+                </ion-list>
+            </ion-row>
+            <ion-row style="width:100%">
+                <button [disabled]="!f.valid" type="submit" item-right style="width: 100%">
+                    <ion-icon  class="arrow" color="primary" ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle" (click)="gotoemail(f)" ></ion-icon>
+                </button>
+            </ion-row>
+        </ion-grid>
 
-        <button [disabled]="!f.valid" type="submit" item-right>
-            <ion-icon  class="arrow" color="primary" ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle" (click)="gotoemail(f)" ></ion-icon>
-        </button>
+
+
 
 
 
