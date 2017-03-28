@@ -5,20 +5,23 @@
             <ion-icon name="menu"></ion-icon>
         </button>
         <ion-title>SIKKH</ion-title>
+
     </ion-navbar>
 
 </ion-header>
 
-<ion-content padding>
-    <ion-card class="img">
-        <img src="assets/imgs/uber.png">
-    </ion-card>
+<ion-content>
+    <div class="img">
+
+            <img src="assets/imgs/uber.png">
+
+    </div>
 <br><br><br><br>
     <ion-grid>
         <ion-row>
             <ion-col>
               <div>
-                  <img class="userimg" src="assets/imgs/Untitled-20.png" (click)="gotousersign(BeforeSignupPage.driverType)" >
+                  <img class="userimg" src="assets/imgs/driver.png" (click)="gotousersign(BeforeSignupPage.driverType)" >
               </div>
 
                 <div>
@@ -29,7 +32,7 @@
             </ion-col>
 
             <ion-col>
-               <div> <img class="driverimg" src="assets/imgs/Untitled-21.png" (click)="gotousersign(BeforeSignupPage.userType)"></div>
+               <div> <img class="driverimg" src="assets/imgs/user.png" (click)="gotousersign(BeforeSignupPage.userType)"></div>
                <div><span class="driver">User</span></div>
             </ion-col>
         </ion-row>

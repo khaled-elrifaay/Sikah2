@@ -1,7 +1,7 @@
 page-signup {
     ion-avatar {
         border: 1px solid white;
-        width: 120px;
+        width: 100px;
         border-radius: 46px;
         margin-left: auto;
         margin-right: auto;
@@ -21,15 +21,17 @@ page-signup {
         // border: 1px solid #390c2b;
     }
     .arrow {
-        font-size: 3.2em;
-        margin-left: 7px;
-        margin-right: auto;
-        //margin-top: inherit;
-        padding:5px;
-       //position: absolute;
-       // top: 45%;
-       // left: 50%;
-
+        font-size: 2.2em;
+        margin-top: inherit;
+        background-color: #390c2b;
+        color: white;
+        width: 18%;
+        padding-top: 9px;
+        top: 6px;
+        padding-bottom: 5px;
+        height: 100%;
+        border: 1px solid #390c2b;
+        border-radius: 100%;
     }
     .sign{
 

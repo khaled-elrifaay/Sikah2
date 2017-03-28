@@ -18,6 +18,7 @@
     <div class="profile">
         <ion-avatar>
             <img src="assets/imgs/user.png">
+            <!--image path for user <img src="assets/imgs/driver.png"> -->
         </ion-avatar>
 
         <input type="file" name="userpic" id="userpic" style="display: none;"
@@ -32,10 +33,14 @@
                 Enter Your Mobile.</h3>
         </ion-row>
         <ion-row>
-            <ion-input class="mobile" type="text" placeholder="mobile" name="mobile" [(ngModel)]="user.mobile" required></ion-input>
-            <button [disabled]="!f.valid" type="submit" item-right>
-                <ion-icon class="arrow" color="primary" ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle" (click)="gotoactivecode()" ></ion-icon>
-            </button>
+            <ion-col col-9>
+                <ion-input class="mobile" type="text" placeholder="mobile" name="mobile" [(ngModel)]="user.mobile" required></ion-input>
+            </ion-col>
+            <ion-col col-3>
+                <button [disabled]="!f.valid" type="submit" item-right>
+                    <ion-icon class="arrow" color="primary" ios="ios-arrow-round-forward" md="md-arrow-round-forward" (click)="gotoactivecode()" ></ion-icon>
+                </button>
+            </ion-col>
         </ion-row>
         <br>
         <ion-row>

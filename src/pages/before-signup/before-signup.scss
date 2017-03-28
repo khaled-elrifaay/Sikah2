@@ -1,7 +1,8 @@
 page-before-signup {
 ion-card{
-        border: 1px solid #390c2b,
-;
+    border: 1px solid #390c2b;
+    width: 100%;
+
 }
 ion-row.row {
     margin-left: 45px;
@@ -21,4 +22,11 @@ span.driver {
     font-weight: 600;
     color: #390c2b;
 }
+.img{
+    width: 100%;
+    height: 50%;
+    background-color:#390c2b;
+    padding-top: 30px;
+}
+
 }

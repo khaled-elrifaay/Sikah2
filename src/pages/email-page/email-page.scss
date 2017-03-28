@@ -1,7 +1,7 @@
 page-email-page {
   ion-avatar {
     border: 1px solid white;
-    width: 120px;
+    width: 100px;
     border-radius: 46px;
     margin-left: auto;
     margin-right: auto;
@@ -22,9 +22,18 @@ page-email-page {
     border: 1px solid #390c2b;
   }
   .arrow {
-    font-size: 3.2em;
-
-    margin-top: inherit;
+    font-size: 2.2em;
+    margin-top: 10px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    background-color: #390c2b;
+    color: white;
+    width: 58%;
+    padding-top: 9px;
+    height: 73%;
+    border: 1px solid #390c2b;
+    border-radius: 100%;
   }
   .grid {
     padding: 5px;
@@ -39,6 +48,14 @@ page-email-page {
    font-size: 1.2em;
     padding-top: 10px;
     border-bottom: 3px solid #390c2b;
+
+  }
+  .btn{
+    position: absolute;
+    right:10px;
+    top: 30px;
+    background-color: white;
+
   }
 
 }

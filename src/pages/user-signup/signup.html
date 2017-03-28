@@ -13,6 +13,7 @@
     <div class="profile">
         <ion-avatar>
             <img src="assets/imgs/user.png">
+            <!--image path for user <img src="assets/imgs/driver.png"> -->
         </ion-avatar>
         <input type="file" name="userpic" id="userpic" style="display: none;" accept="image/x-png, image/gif, image/jpeg">
         <label for="userpic"></label>
@@ -22,29 +23,18 @@
             <ion-row style="width:100%">
                 <ion-list>
                     <ion-item>
-<<<<<<< HEAD
-                        <ion-input class="sign" type="text" placeholder="Firstname" name="firstname" ngModel required style="border-right:2px solid #390C2B;"></ion-input>
-=======
+
                         <ion-input class="sign" type="text" placeholder="Firstname" name="firstname" ngModel required style="border-right:2px solid #390C2B ;"></ion-input>
->>>>>>> 648b7e342358000b46dc4937fc5097fed5ba9223
+
                         <ion-input class="sign" type="text" placeholder="Lastname" name="lastname" ngModel required></ion-input>
                     </ion-item >
                 </ion-list>
             </ion-row>
-            <ion-row style="width:100%">
-                <button [disabled]="!f.valid" type="submit" item-right style="width: 100%">
-                    <ion-icon  class="arrow" color="primary" ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle" (click)="gotoemail(f)" ></ion-icon>
+            <ion-row style="width:100%; background-color: white">
+                <button [disabled]="!f.valid" type="submit" item-right style="width: 100%;background-color: white">
+                    <ion-icon  class="arrow" color="primary"  ios="ios-arrow-round-forward" md="md-arrow-round-forward" (click)="gotoemail(f)" ></ion-icon>
                 </button>
             </ion-row>
         </ion-grid>
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> 648b7e342358000b46dc4937fc5097fed5ba9223
-
-
     </form>
 </ion-content>
