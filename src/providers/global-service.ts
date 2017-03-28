@@ -36,6 +36,7 @@ export class GlobalService {
             'email' : user.email
         }
     return this.http.post(this.userForgetPassword_url,body).map((res) => res.json());
+
     }
     driverForgetPassword(user:any)
     {

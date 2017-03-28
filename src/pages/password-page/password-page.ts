@@ -70,7 +70,8 @@ driverForgetPassword()
     if(res.driversid)
     {
       this.customToast.toast("Email Is Sent");
-    }console.log(res);
+    }
+    console.log(res);
   });
 }
 }
