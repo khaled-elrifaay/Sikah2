@@ -30,13 +30,19 @@ export class GlobalService {
      console.log('Hello GlobalService Provider');
 
     }
-    userForgetPassword(email:any)
+    userForgetPassword(user:any)
     {
-    return this.http.post(this.userForgetPassword_url,email).map((res) => res.json());
+        let body = {
+            'email' : user.email
+        }
+    return this.http.post(this.userForgetPassword_url,body).map((res) => res.json());
     }
-    driverForgetPassword(email:any)
+    driverForgetPassword(user:any)
     {
-      return this.http.post(this.driverForgetPassword_url,email).map((res) => res.json());
+        let body = {
+            'email' : user.email
+        }
+      return this.http.post(this.driverForgetPassword_url,body).map((res) => res.json());
     }
     userResendCode(user :any)
     {
