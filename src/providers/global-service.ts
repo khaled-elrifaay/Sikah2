@@ -22,11 +22,22 @@ export class GlobalService {
   public driverLogin_url : string = "http://sikkh.com/ws/login/driver";
   public userResendCode_url : string ="http://sikkh.com/ws/resend/code";
   public driverResendCode_url :string = "http://sikkh.com/ws/resend/driver";
+  public userForgetPassword_url :string ="http://sikkh.com/ws/forgetpassword/user";
+  public driverForgetPassword_url :string ="http://sikkh.com/ws/forgetpassword/driver";
   
-  constructor(public http: Http,public storage: Storage,) {
-    console.log('Hello GlobalService Provider');
+  
+    constructor(public http: Http,public storage: Storage,) {
+     console.log('Hello GlobalService Provider');
 
-  }
+    }
+    userForgetPassword(email:any)
+    {
+    return this.http.post(this.userForgetPassword_url,email).map((res) => res.json());
+    }
+    driverForgetPassword(email:any)
+    {
+      return this.http.post(this.driverForgetPassword_url,email).map((res) => res.json());
+    }
     userResendCode(user :any)
     {
         return this.http.post(this.userResendCode_url,user).map((res) => res.json());
