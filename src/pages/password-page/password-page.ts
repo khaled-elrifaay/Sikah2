@@ -4,7 +4,8 @@ import { MobilePagePage } from '../mobile-page/mobile-page';
 import { DriverIdPage } from '../driver-id/driver-id';
 import {BeforeSignupPage} from "../before-signup/before-signup";
 import {BeforeLoginPage} from "../before-login/before-login";
-
+import {GlobalService} from "../../providers/global-service";
+import {CustomToast} from "../../general-components/toast.component";
 /*
   Generated class for the PasswordPage page.
 
@@ -18,7 +19,8 @@ import {BeforeLoginPage} from "../before-login/before-login";
 export class PasswordPagePage {
   public user;
   public BeforeLoginPage = BeforeLoginPage;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              private globalService:GlobalService,private customToast :CustomToast  ) {
     this.user = navParams.data;
     console.log(this.user);
   }
@@ -39,6 +41,30 @@ gotomobile(){
   {
     this.navCtrl.push(DriverIdPage,this.user);
   }
-  
+}
+forgetPassword()
+{
+  if(this.user.type == BeforeSignupPage.userType)
+  {
+    this.userForgetPassword();
+  }
+  else
+  {
+    this.driverForgetPassword();
+  }
+}
+userForgetPassword()
+{
+  this.globalService.userForgetPassword(this.user).subscribe((res)=>{
+    this.customToast.toast("Email Is Sent");
+    console.log(res);
+  });
+}
+driverForgetPassword()
+{
+  this.globalService.driverForgetPassword(this.user).subscribe((res)=>{
+    this.customToast.toast("Email Is Sent");
+    console.log(res);
+  });
 }
 }

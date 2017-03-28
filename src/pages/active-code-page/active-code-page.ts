@@ -4,6 +4,7 @@ import { GlobalService } from '../../providers/global-service';
 import { NgForm } from '@angular/forms';
 import { CustomToast } from '../../general-components/toast.component';
 import {Home} from "../home/home";
+import {BeforeSignupPage} from "../before-signup/before-signup";
 
 /*
   Generated class for the ActiveCodePage page.
@@ -78,6 +79,34 @@ export class ActiveCodePagePage {
        }
      );
   }
-  
+  userResendCode()
+  {
+    this.globalService.userResendCode(this.res.user).subscribe(
+      (res)=>{
+        this.customToast.toast('Code Is Sent');
+        console.log(res);
+      }
+    );
+  }
+  driverResendCode()
+  {
+    this.globalService.driverResendCode(this.res.driver).subscribe(
+      (res)=>{
+        this.customToast.toast('Code Is Sent');
+        console.log(res);
+      }
+    );
+  }
+  resendCode()
+  {
+    if(this.res.type == BeforeSignupPage.userType)
+    {
+      this.userResendCode();
+    }
+    else
+    {
+      this.driverResendCode();
+    }
+  }
   
 }

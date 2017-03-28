@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams ,AlertController} from 'ionic-angular';
 import {DriverCarLicensePage} from "../driver-car-license/driver-car-license";
 import { Camera } from 'ionic-native';
 /*
@@ -19,7 +19,8 @@ export class DriverCarPage {
   public car_back : string ;
   readonly front = 1 ;
   readonly back = 0 ;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public alertCtrl : AlertController) {
     this.user = navParams.data;
     this.pushPage = DriverCarLicensePage;
 
@@ -31,35 +32,74 @@ export class DriverCarPage {
 
   takeFrontImage()
   {
-    this.takePicture(this.front);
+   // this.takePicture(this.front);
+   this.galleryOrCamera(this.front);
   }
   takeBackImage()
   {
-    this.takePicture(this.back);
+    //this.takePicture(this.back);
+   this.galleryOrCamera(this.back); 
   }
-
-
-  takePicture(type : any){
+  galleryOrCamera(type:any) {
+    let confirm = this.alertCtrl.create({
+      title:  'Choose method',
+      message: 'Choose picture from gallery or camera ?',
+      buttons: [
+        {
+          text: 'Gallery',
+          handler: () => {
+            this.pickPicture(type);
+          }
+        },
+        {
+          text: 'Camera',
+          handler: () => {
+            this.takePicture(type);
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+  pickPicture(type:any) {
+    //noinspection TypeScriptUnresolvedVariable
     Camera.getPicture({
       destinationType: Camera.DestinationType.DATA_URL,
+      sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+      allowEdit: true,
       targetWidth: 1000,
       targetHeight: 1000
     }).then((imageData) => {
       // imageData is a base64 encoded string
-      if(type == this.front)
-      {
-        this.car_front = "data:image/jpeg;base64," + imageData;
-        this.user.car_front = imageData;
-      }
-      else
-      {
-        this.car_back = "data:image/jpeg;base64," + imageData;
-        this.user.car_back = imageData;
-      }
-
+      this.image_accommodation(type,imageData);
     }, (err) => {
       console.log(err);
     });
+  }
+  takePicture(type : any){
+    Camera.getPicture({
+        destinationType: Camera.DestinationType.DATA_URL,
+        targetWidth: 1000,
+        targetHeight: 1000
+    }).then((imageData) => {
+      // imageData is a base64 encoded string
+        this.image_accommodation(type,imageData);
+    }, (err) => {
+        console.log(err);
+    });
+  }
+  image_accommodation(type:any,imageData:any)
+  {
+      if(type == this.front)
+        {
+          this.car_front = "data:image/jpeg;base64," + imageData;
+          this.user.id_front = imageData;
+        }
+        else
+        {
+          this.car_back = "data:image/jpeg;base64," + imageData;
+          this.user.id_back = imageData;
+        }
   }
 
 }
