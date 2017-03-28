@@ -31,7 +31,7 @@ export class BeforeLoginPage {
   ionViewWillEnter()
   {
     this.user.password = null;
-    this.user.mobile = null;
+    this.user.mobile = "00967";
     this.user.first_name = null;
     this.user.last_name = null;
     this.user.email = null;
