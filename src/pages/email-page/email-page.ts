@@ -4,6 +4,7 @@ import {PasswordPagePage} from '../password-page/password-page';
 import {Arrived} from "../arrived/arrived";
 import {NgForm} from "@angular/forms";
 import {BeforeLoginPage} from "../before-login/before-login";
+import {BeforeSignupPage} from "../before-signup/before-signup";
 
 /*
   Generated class for the EmailPage page.
@@ -19,6 +20,7 @@ export class EmailPagePage {
   public pushPage;
   public user;
   public BeforeLoginPage = BeforeLoginPage ;
+  public BeforeSignupPage = BeforeSignupPage ;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.pushPage = PasswordPagePage;
     this.user = navParams.data;

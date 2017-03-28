@@ -18,6 +18,7 @@ import {BeforeSignupPage} from "../before-signup/before-signup";
 })
 export class ActiveCodePagePage {
   private res ;
+  public BeforeSignupPage = BeforeSignupPage;
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private globalService :GlobalService ,
               private customToast : CustomToast) {

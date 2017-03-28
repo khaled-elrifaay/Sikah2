@@ -2,6 +2,7 @@ import {Component, Self} from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {EmailPagePage} from "../email-page/email-page";
 import {SignupPage} from "../user-signup/signup";
+import {BeforeSignupPage} from "../before-signup/before-signup";
 
 /*
   Generated class for the BeforeLogin page.
@@ -19,6 +20,7 @@ export class BeforeLoginPage {
   public pushSignUp ;
   public static readonly signupCode = 0;
   public static readonly loginCode = 1;
+  public BeforeSignupPage = BeforeSignupPage;
   constructor(public navCtrl: NavController, public navParams: NavParams)
   {
     this.user = navParams.data;

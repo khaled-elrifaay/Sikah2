@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
+import {BeforeSignupPage} from '../before-signup/before-signup';
 import { NavController, NavParams } from 'ionic-angular';
 import {EmailPagePage} from '../email-page/email-page';
 
@@ -17,6 +17,7 @@ import {EmailPagePage} from '../email-page/email-page';
 export class SignupPage {
 
   public user;
+  public BeforeSignupPage = BeforeSignupPage ; 
   constructor(public navCtrl: NavController, public navParams: NavParams) 
   {
     this.user = navParams.data;

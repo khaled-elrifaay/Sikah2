@@ -19,6 +19,7 @@ import {CustomToast} from "../../general-components/toast.component";
 export class PasswordPagePage {
   public user;
   public BeforeLoginPage = BeforeLoginPage;
+  public BeforeSignupPage = BeforeSignupPage;
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private globalService:GlobalService,private customToast :CustomToast  ) {
     this.user = navParams.data;
@@ -56,15 +57,20 @@ forgetPassword()
 userForgetPassword()
 {
   this.globalService.userForgetPassword(this.user).subscribe((res)=>{
-    this.customToast.toast("Email Is Sent");
+    if(res.userid)
+    {
+      this.customToast.toast("Email Is Sent");
+    }
     console.log(res);
   });
 }
 driverForgetPassword()
 {
   this.globalService.driverForgetPassword(this.user).subscribe((res)=>{
-    this.customToast.toast("Email Is Sent");
-    console.log(res);
+    if(res.driversid)
+    {
+      this.customToast.toast("Email Is Sent");
+    }console.log(res);
   });
 }
 }

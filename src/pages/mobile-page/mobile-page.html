@@ -17,8 +17,8 @@
 <ion-content padding>
     <div class="profile">
         <ion-avatar>
-            <img src="assets/imgs/user.png">
-            <!--image path for user <img src="assets/imgs/driver.png"> -->
+            <img *ngIf="this.user.type == BeforeSignupPage.userType"  src="assets/imgs/user.png">
+            <img *ngIf="this.user.type == BeforeSignupPage.driverType" src="assets/imgs/driver.png">
         </ion-avatar>
 
         <input type="file" name="userpic" id="userpic" style="display: none;"
